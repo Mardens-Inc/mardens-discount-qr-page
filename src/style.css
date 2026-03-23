@@ -85,14 +85,15 @@ footer {
 
 #discount-search {
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.25rem;
     border: 2px solid #ccc;
     border-radius: 999px;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-family: "Roboto", sans-serif;
     outline: none;
     transition: border-color 0.2s ease;
     box-sizing: border-box;
+    min-height: 48px;
 }
 
 #discount-search:focus {
@@ -114,7 +115,8 @@ footer {
 }
 
 #discount-list li {
-    width: min(120px, calc(33.333% - 0.75rem));
+    width: calc(40% - 0.75rem);
+    aspect-ratio: 4 / 3;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
@@ -122,6 +124,8 @@ footer {
     user-select: none;
     overflow: hidden;
     background: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 #discount-list li:hover {
@@ -133,16 +137,21 @@ footer {
     padding: 0.6rem 0.5rem 0.5rem;
     text-align: center;
     text-transform: capitalize;
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #discount-list li .tag-name {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
 #discount-list li .tag-percent {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     line-height: 1.1;
 }
@@ -152,13 +161,14 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 1px;
-    padding: 0.4rem 0.75rem;
+    padding: 0.25rem 0.75rem;
     background: #fff;
+    flex: 3;
 }
 
 #discount-list li .tag-barcode span {
     display: block;
-    height: 20px;
+    height: 100%;
     background: #000;
 }
 
@@ -178,23 +188,79 @@ footer {
 
 /* --- Mobile ≤ 480px --- */
 @media (max-width: 480px) {
-    nav { margin-bottom: 0.5rem; }
-    svg#logo-image { width: 40%; padding: 0.5rem; }
-    .container { border-width: 3px; padding: 6px; width: 90%; }
-    #discount-section { width: 95%; gap: 0.5rem; margin-top: 0.5rem; }
-    #discount-search { padding: 0.4rem 0.75rem; font-size: 0.875rem; }
-    #discount-list { gap: 0.5rem; padding: 0.25rem; }
-    #discount-list li .tag-percent { font-size: 1.2rem; }
-    #discount-list li .tag-color { padding: 0.4rem 0.3rem 0.35rem; }
-    #discount-list li .tag-barcode { padding: 0.25rem 0.5rem; }
-    #discount-list li .tag-barcode span { height: 14px; }
-    footer { height: 2.5rem; font-size: 0.8rem; }
+    nav {
+        margin-bottom: 0.5rem;
+    }
+
+    svg#logo-image {
+        width: 40%;
+        padding: 0.5rem;
+    }
+
+    .container {
+        border-width: 3px;
+        padding: 6px;
+        width: 90%;
+    }
+
+    #discount-section {
+        width: 95%;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #discount-search {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        min-height: 44px;
+    }
+
+    #discount-list {
+        gap: 0.5rem;
+        padding: 0.25rem;
+    }
+
+    #discount-list li .tag-percent {
+        font-size: 1.6rem;
+    }
+
+    #discount-list li .tag-color {
+        padding: 0.4rem 0.3rem 0.35rem;
+    }
+
+    #discount-list li .tag-name {
+        font-size: 0.75rem;
+    }
+
+    #discount-list li .tag-barcode {
+        padding: 0.25rem 0.5rem;
+    }
+
+    #discount-list li .tag-barcode span {
+        height: 14px;
+    }
+
+    footer {
+        height: 2.5rem;
+        font-size: 0.8rem;
+    }
 }
 
 /* --- Tiny screens ≤ 360px --- */
 @media (max-width: 360px) {
-    #discount-list { gap: 0.4rem; }
-    #discount-list li { width: min(100px, calc(33.333% - 0.4rem)); }
-    #discount-list li .tag-name { font-size: 0.6rem; }
-    #discount-list li .tag-percent { font-size: 1rem; }
+    #discount-list {
+        gap: 0.4rem;
+    }
+
+    #discount-list li {
+        width: calc(50% - 0.4rem);
+    }
+
+    #discount-list li .tag-name {
+        font-size: 0.6rem;
+    }
+
+    #discount-list li .tag-percent {
+        font-size: 1rem;
+    }
 }
