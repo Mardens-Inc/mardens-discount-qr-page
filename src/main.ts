@@ -61,8 +61,14 @@ if (tagQueryIndex != -1)
     if (tagDiscount)
     {
         const discountElement = document.getElementById("discount-value");
+        const titleElement = document.getElementById("title");
+        const containerElement = document.querySelector(".container") as HTMLElement | null;
         if (discountElement)
             discountElement.innerHTML = `${tagDiscount.percentage * 100}%`;
+        if (titleElement)
+            titleElement.style.display = "";
+        if (containerElement)
+            containerElement.style.display = "";
     }
 }
 
