@@ -3,13 +3,16 @@ body {
     margin: 0;
     height: 100dvh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 #app {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100% - 9.15rem);
+    flex: 1;
+    min-height: 0;
     overflow-y: auto;
 }
 
@@ -58,7 +61,6 @@ svg#logo-image {
 }
 
 footer {
-    margin-top: auto;
     width: 100%;
     color: white;
     text-align: center;
