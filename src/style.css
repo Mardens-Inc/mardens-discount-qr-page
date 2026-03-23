@@ -1,0 +1,183 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 9.15rem);
+    overflow-y: auto;
+}
+
+#title {
+    font-size: 2rem;
+    color: black;
+    opacity: 0.8;
+    font-weight: 900;
+}
+
+#discount-value {
+    font-weight: 900;
+    font-size: 10rem;
+    text-align: center;
+    color: #ec2b37;
+}
+
+#discount-text {
+    font-weight: 500;
+    font-size: 3rem;
+    text-align: center;
+    font-style: italic;
+    color: #ec2b37;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    border: 5px dashed #ec2b37;
+    padding: 10px;
+    width: 80%;
+}
+
+nav {
+    width: 100%;
+    background-color: #ec2b37;
+    margin-bottom: 1rem;
+}
+
+svg#logo-image {
+    width: 50%;
+    padding: 1rem;
+    fill: white;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    background-color: #ec2b37;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 0.25rem;
+}
+
+#discount-section {
+    width: 90%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+#discount-search {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    outline: none;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+#discount-search:focus {
+    border-color: #ec2b37;
+}
+
+#discount-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow-y: auto;
+    flex: 1;
+    align-content: flex-start;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+#discount-list li {
+    width: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    user-select: none;
+    overflow: hidden;
+    background: #fff;
+}
+
+#discount-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+#discount-list li .tag-color {
+    padding: 0.6rem 0.5rem 0.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#discount-list li .tag-name {
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#discount-list li .tag-percent {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+#discount-list li .tag-barcode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    padding: 0.4rem 0.75rem;
+    background: #fff;
+}
+
+#discount-list li .tag-barcode span {
+    display: block;
+    height: 20px;
+    background: #000;
+}
+
+#discount-list:empty::after {
+    content: "No matching tags found";
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 2rem 0;
+}
+
+#discount-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#discount-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#discount-list::-webkit-scrollbar-thumb {
+    background-color: #ec2b37;
+    border-radius: 3px;
+}
