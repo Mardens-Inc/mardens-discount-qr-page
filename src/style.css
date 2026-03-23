@@ -116,7 +116,7 @@ footer {
 
 #discount-list li {
     width: calc(40% - 0.75rem);
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 4 / 2.75;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
@@ -145,7 +145,7 @@ footer {
 }
 
 #discount-list li .tag-name {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -220,20 +220,12 @@ footer {
         padding: 0.25rem;
     }
 
-    #discount-list li .tag-percent {
-        font-size: 1.6rem;
-    }
-
     #discount-list li .tag-color {
         padding: 0.4rem 0.3rem 0.35rem;
     }
 
     #discount-list li .tag-name {
         font-size: 0.75rem;
-    }
-
-    #discount-list li .tag-barcode {
-        padding: 0.25rem 0.5rem;
     }
 
     #discount-list li .tag-barcode span {
@@ -260,7 +252,4 @@ footer {
         font-size: 0.6rem;
     }
 
-    #discount-list li .tag-percent {
-        font-size: 1rem;
-    }
 }
