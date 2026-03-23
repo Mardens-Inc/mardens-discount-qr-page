@@ -113,7 +113,7 @@ footer {
 }
 
 #discount-list li {
-    width: 120px;
+    width: min(120px, calc(33.333% - 0.75rem));
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
