@@ -112,6 +112,7 @@ footer {
     justify-content: center;
     margin: 0;
     padding: 0.5rem;
+    max-width: 500px;
 }
 
 #discount-list li {
@@ -168,7 +169,7 @@ footer {
 
 #discount-list li .tag-barcode span {
     display: block;
-    height: 100%;
+    height: 16px;
     background: #000;
 }
 
@@ -198,7 +199,6 @@ footer {
     }
 
     .container {
-        border-width: 3px;
         padding: 6px;
         width: 90%;
     }
@@ -226,10 +226,6 @@ footer {
 
     #discount-list li .tag-name {
         font-size: 0.75rem;
-    }
-
-    #discount-list li .tag-barcode span {
-        height: 14px;
     }
 
     footer {
